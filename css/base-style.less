@@ -1,0 +1,259 @@
+@import url(http://fonts.googleapis.com/css?family=Strait);
+@import url(variables.less);
+
+html, body {
+  font-family: 'Strait', sans-serif;
+}
+header {
+  // background: @headerBG;
+  border: none;
+  width: 100%;
+  background: rgba(255, 255, 255, 1) !important;
+  color: @black;
+  position: fixed;
+  bottom: 0;
+
+  #logo {
+    cursor: pointer;
+    span.glyphicon {
+      position: relative;
+      top: .1em;
+      font-size: 1.1em;
+    }
+    span.title {
+      display: inline-block;
+      position: relative;
+      font-size: 1.3em;
+      margin-left: 0.7em;
+      top: .1em;
+    }
+    img {
+        // position: fixed;
+        // top: 0%;
+        // left: 10%;
+        margin-top: -2px;
+        margin-right: 10px;
+      }
+  }
+  li {
+    height: 60px;
+  }
+  li.active {
+    a {
+      /*
+      background: rgba(255,255,255,1);
+      background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 88%, rgba(255,0,0,1) 88%, rgba(255,0,0,1) 100%);
+      background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 85%, rgba(255,0,0,1) 88%, rgba(255,0,0,1) 100%);
+      background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 88%, rgba(255,0,0,1) 88%, rgba(255,0,0,1) 100%);
+      */
+     background: @greyD;
+    }
+  }
+  li > a {
+    color: @black;
+    font-size: 1.3em;
+    padding: 20px 15px !important;
+
+    > span.glyphicon {
+      position: relative;
+      top: 0.3em;
+      font-size: 1.8em;
+      margin-top: -0.4em;
+    }
+  }
+  .dropdown span.glyphicon {
+    display: inline-block;
+    font-size: 1.3em;
+    margin-top: -0.3em;
+    margin-right: 0.3em;
+    position: relative;
+    top: 0.2em;
+  }
+  > .navbar {
+    position: fixed !important;
+  }
+  a.navbar-brand {
+    color: @black;
+    padding: 2px;
+  }
+  .navbar-toggle .icon-bar {
+    background-color: @black;
+  }
+}
+
+/* Slide Common */
+#slide-1, #slide-2, #slide-3, #slide-4 {
+  h2 {
+    margin: 0;
+    background: transparent;
+    color: #ff9966;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+  }
+  p {
+    background: transparent;
+    color: #f7f8e9;
+  }
+}
+/* Slide 1 */
+#slide-1 {
+  .bg {
+    background-image:url('../img/bg-sc1.jpg');
+  }
+  .hsContainer {
+    top: 0%;
+    // border: 1px solid #0f0;
+    .hsContent {
+      // bottom: 200px;
+      top: 0%;
+      // background: rgba(0, 0, 0, 0.7);
+      color: @white;
+      // padding: 15px 20px;
+      // margin: 0;
+      // border-radius: 10px;
+      left: 15%;
+      img {
+        // position: fixed;
+        top: 0%;
+        left: 10%;
+        margin-top: -2px;
+      }
+      h2 {
+        color: @white;
+        font-size: 4em;
+        background: transparent;
+      }
+    }
+  }
+}
+
+/* Slide 2 */
+#slide-2 {
+  .bg {
+    background-image:url('../img/bg-sc2.jpg');
+  }
+  .hsContainer {
+    .hsContent {
+      margin-left: -450px;
+      position: fixed;
+      top: 35%;
+      background: rgba(0, 0, 0, 0.5);
+      color: @white;
+      padding: 15px 20px;
+      border-radius: 10px;
+      // img {
+      //   position: fixed;
+      //   top: 0%;
+      //   left: 10%;
+      //   margin-top: -2px;
+      // }
+    }
+  }
+}
+
+/* Slide 3 */
+#slide-3 {
+  .bg {
+    background-image:url('../img/bg-sc3.jpg');
+  }
+  .hsContainer {
+    .hsContent {
+      margin-left: -239px;
+      background: rgba(0, 0, 0, 0.5);
+      color: @white;
+      padding: 15px 20px;
+      border-radius: 10px;
+    }
+  }
+}
+
+/* Slide 4 */
+#slide-4 {
+  .bg {
+    background: #eee;
+  }
+  .hsContainer {
+    .hsContent {
+      left: 20%;
+      position: fixed;
+      top: 100px;
+      max-width: 80%;
+      ul.sitemap {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li {
+          float: left;
+          padding-right: 4em;
+          h4 {
+            font-size: 1.5em;
+            color: #ff9966;
+          }
+          ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            margin-top: 2em;
+
+            li {
+              clear: both;
+              display: block;
+              padding-bottom: 1em;
+              a {
+                color: #666666;
+                text-decoration: none;
+                &.designer1 {
+                  color:#fff; text-shadow:2px 2px 2px #000;
+                }
+                &.designer2 {
+                  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(1, #60f));
+                  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(1, #f2f));
+                  color:transparent;
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                }
+              }
+              a:hover {
+                color: #330000 !important;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.rainbow {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@media (max-width: 767px) {
+  // html {overflow-x: hidden;}
+  section {
+    min-width: 100%;
+  }
+  #slide-1 {
+    .hsContainer {
+      width: 100%;
+
+      .hsContent {
+        width: 70%;
+        background: rgba(0, 0, 0, 0.5);
+        color: @white;
+        padding: 15px 20px;
+        border-radius: 10px;
+        left: 15%;
+        top: 10%;
+        opacity: 1 !important;
+        min-height: 30%;
+        p {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
