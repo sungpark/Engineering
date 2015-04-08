@@ -135,9 +135,9 @@ header {
     background-image:url('../img/bg-sc1.jpg');
   }
   .hsContainer {
-    top: 50%;
+    // top: 50%;
     // border: 1px solid #0f0;
-    height: 50%;
+    // height: 50%;
     background: rgba(0, 0, 0, 0.5);
     .hsContent {
       // bottom: 200px;
@@ -167,12 +167,14 @@ header {
 
   .carousel {
     margin-bottom: 0px;
+
     .item {
       background-color: #777;
     }
     .carousel-caption {
+      height: auto;
       z-index: 10;
-      top: 65%;
+      top: 55%;
       text-align: center;
       background: rgba(0, 0, 0, 0.7);
       color: @white;
@@ -283,8 +285,8 @@ header {
       background: transparent;
       padding: 15px 20px;
       border-radius: 10px;
-      left: 20%;
-      top: 30%;
+      left: 10%;
+      top: 20%;
       h2 {
         color: @black;
         font-size: 4em;
@@ -292,10 +294,17 @@ header {
         text-shadow: none;
       }
       p {
-        font-size: 1.1em;
+        font-size: 1.2em;
         background: transparent;
         color: @black;
         margin: 20px 0 0 10px;
+      }
+      ul {
+        margin: 0;
+        margin-top: 1em;
+        li {
+          font-size: 1.2em;
+        }
       }
     }
   }
