@@ -252,7 +252,7 @@ html, body {
   }
   .hsContainer {
     background: url('../img/bg-toplayer.png') right bottom no-repeat;
-    background-size: 80% 90%;
+    background-size: contain;
 
     .hsContent {
       margin-left: 0px;
@@ -319,6 +319,11 @@ html, body {
           -ms-transform: rotate(6deg);
           -webkit-transform: rotate(6deg);
           transform: rotate(6deg);
+        }
+        li:hover {
+          -ms-transform: rotate(0deg);
+          -webkit-transform: rotate(8deg);
+          transform: rotate(0deg);
         }
       }
     }
