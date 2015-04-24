@@ -17,7 +17,22 @@
   <script type="text/javascript" src="js/vendor/modernizr-2.7.1.min.js"></script>
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script type="text/javascript" src="js/jquery.interactive_bg.js"></script>
-
+  <script>
+    $(function() {
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
+  </script>
 </head>
 <body class="loading">
   <div id="preload">
@@ -105,11 +120,53 @@
       			data--100-bottom="opacity: 0; top: 25%;"
       			data-anchor-target="#slide-3"
       		>
-            <h2>The Networks</h2>
+            <!-- <h2>The Networks</h2>
             <p>Our investment in superior wireless, fiber optic and global IP networks puts Verizon at the center of powerful growth markets. Our networks enable us to deliver innovative services like cloud, video and telematics to enrich the lives of our customers around the globe.</p>
             <p>Verizon is one of the largest communication technology companies in the world. We operate America’s largest 4G LTE wireless network and the nation’s premiere all-fiber broadband network.</p>
             <p>We also operate one of the world's most connected public internet backbone networks, enabling global solutions for secure communication. Our Global IP network connects over 2700 cities in more than 150 countries. More than 5 percent of the internet's traffic flows over our network.
-            </p>
+            </p> -->
+
+<div id="stage">
+<div id="chartX">
+<div id="chartY">
+<div id="chartZ">
+<div class="bar" style="left: 0px; background: rgba(255,255,255,0.7); -webkit-transform: translateZ(80px); -moz-transform: translateZ(80px);">
+<div class="barfront" style="height: 80px;"></div>
+<div class="barback" style="height: 80px;"></div>
+<div class="barright" style="width: 80px;"></div>
+<div class="barleft" style="width: 80px;"></div>
+20
+</div>
+
+<div class="bar" style="left: 50px; background: rgba(255,255,255,0.7); -webkit-transform: translateZ(120px); -moz-transform: translateZ(120px);">
+<div class="barfront" style="height: 120px;"></div>
+<div class="barback" style="height: 120px;"></div>
+<div class="barright" style="width: 120px;"></div>
+<div class="barleft" style="width: 120px;"></div>
+30
+</div>
+
+<div class="bar" style="left: 100px; background: rgba(255,255,255,0.7); -webkit-transform: translateZ(40px); -moz-transform: translateZ(40px);">
+<div class="barfront" style="height: 40px;"></div>
+<div class="barback" style="height: 40px;"></div>
+<div class="barright" style="width: 40px;"></div>
+<div class="barleft" style="width: 40px;"></div>
+10
+</div>
+
+<div class="bar" style="left: 150px; background: rgba(255,255,255,0.7); -webkit-transform: translateZ(160px); -moz-transform: translateZ(160px);">
+<div class="barfront" style="height: 160px;"></div>
+<div class="barback" style="height: 160px;"></div>
+<div class="barright" style="width: 160px;"></div>
+<div class="barleft" style="width: 160px;"></div>
+40
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
       		</div>
       	</div>
   		</div>
@@ -228,6 +285,7 @@
               </li> -->
             </ul>
       		</div>
+
       	</div>
       </div>
   	</section>
@@ -252,13 +310,13 @@
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li class=""><a href="#">Scale</a></li>
-          <li class=""><a href="#">Network</a></li>
-          <li class=""><a href="#">Resources</a></li>
-          <li class=""><a href="#">Culture</a></li>
-          <li class=""><a href="#">Expertize</a></li>
-          <li class=""><a href="#">Join Us</a></li>
+          <li class="active"><a href="#slide-1">Home</a></li>
+          <li class=""><a href="#slide-2">Scale</a></li>
+          <li class=""><a href="#slide-3">Network</a></li>
+          <li class=""><a href="#slide-4">Resources</a></li>
+          <li class=""><a href="#slide-5">Culture</a></li>
+          <li class=""><a href="#slide-6">Expertize</a></li>
+          <li class=""><a href="#slide-6">Join Us</a></li>
           <!-- <li class=""><a href="#"><span class="glyphicon glyphicon-star"></span></a></li> -->
         </ul>
       </div>
