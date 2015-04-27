@@ -11,7 +11,6 @@ html, body {
   h2 {
     margin: 0;
     background: transparent;
-    color: #ff9966;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
   }
   p {
@@ -19,6 +18,7 @@ html, body {
     background: transparent;
     color: @white;
     margin: 20px 0 0 10px;
+    min-width: 600px;
   }
 }
 /* Slide 1 */
@@ -28,18 +28,11 @@ html, body {
   }
   .hsContainer {
     top: 0%;
-    // border: 1px solid #0f0;
     .hsContent {
-      // bottom: 200px;
       top: 0%;
-      // background: rgba(0, 0, 0, 0.7);
       color: @white;
-      // padding: 15px 20px;
-      // margin: 0;
-      // border-radius: 10px;
       left: 15%;
       img {
-        // position: fixed;
         top: 0%;
         left: 10%;
         margin-top: -2px;
@@ -171,7 +164,6 @@ html, body {
   .hsContainer {
     display: block;
     .hsContent {
-      // margin-left: -450px;
       position: fixed;
       top: 25%;
       left: 35%;
@@ -179,104 +171,107 @@ html, body {
       color: @white;
       padding: 15px 20px;
       border-radius: 10px;
-      // bottom: 200px;
-      // top: 0%;
-      // background: rgba(0, 0, 0, 0.7);
-      // color: @white;
-      // padding: 15px 20px;
-      // margin: 0;
-      // border-radius: 10px;
-      // left: 15%;
       h2 {
         color: @white;
         font-size: 4em;
         background: transparent;
       }
-
-#stage {
--webkit-perspective: 1200px;
--webkit-perspective-origin: 0% 0%;
--moz-perspective: 1200px;
--moz-perspective-origin: 0% 0%;
-background: transparent;
-}
-#chartX {
-position: relative;
-margin: 1em auto;
-width: 400px;
-height: 160px;
-// border: 1px solid #000;
-// background: -webkit-repeating-linear-gradient(left, rgba(0,0,0,0) 0, rgba(0,0,0,0) 38px, #ccc 40px), -webkit-repeating-linear-gradient(bottom, rgba(0,0,0,0), rgba(0,0,0,0) 38px, #ccc 40px);
-// background: -moz-repeating-linear-gradient(left, rgba(0,0,0,0) 0, rgba(0,0,0,0) 38px, #ccc 40px), -moz-repeating-linear-gradient(bottom, rgba(0,0,0,0), rgba(0,0,0,0) 38px, #ccc 40px);
--webkit-transform-origin: 50% 50%;
--webkit-transform: rotateX(55deg);
--webkit-transform-style: preserve-3d;
--moz-transform-origin: 50% 50%;
--moz-transform: rotateX(35deg);
--moz-transform-style: preserve-3d;
-}
-#chartY {
-  -webkit-transform-origin: 50% 50%;
-  -webkit-transform: rotateY(0deg);
-  -webkit-transform-style: preserve-3d;
-}
-#chartZ {
-  -webkit-transform-origin: 50% 50%;
-  -webkit-transform: rotateZ(-15deg);
-  -webkit-transform-style: preserve-3d;
-}
-.bar {
-position: absolute;
-// bottom: 40px;
-margin: 0;
-width: 1.5em;
-height: 1.8em;
-outline: none;
-text-align: center;
-line-height: 2em;
--webkit-transform-style: preserve-3d;
--moz-transform-style: preserve-3d;
-font-size: 1.5em;
-color: #333;
-}
-.barfront, .barback, .barleft, .barright {
-position: absolute;
-outline: inherit;
-background: inherit;
-}
-.barfront {
-width: inherit;
-bottom: -1px;
--webkit-transform: rotateX(90deg);
--webkit-transform-origin: 50% 100%;
--moz-transform: rotateX(90deg);
--moz-transform-origin: 50% 100%;
-}
-.barback {
-width: inherit;
-top: -1px;
--webkit-transform: rotateX(-90deg);
--webkit-transform-origin: 50% 0;
--moz-transform: rotateX(-90deg);
--moz-transform-origin: 50% 0;
-}
-.barright {
-height: inherit;
-right: -1px;
--webkit-transform: rotateY(-90deg);
--webkit-transform-origin: 100% 50%;
--moz-transform: rotateY(-90deg);
--moz-transform-origin: 100% 50%;
-}
-.barleft {
-height: inherit;
-left: -1px;
--webkit-transform: rotateY(90deg);
--webkit-transform-origin: 0% 50%;
--moz-transform: rotateY(90deg);
--moz-transform-origin: 0% 50%;
-}
-
+      #stage {
+        -webkit-perspective: 1200px;
+        -webkit-perspective-origin: 0% 0%;
+        -moz-perspective: 1200px;
+        -moz-perspective-origin: 0% 0%;
+        background: transparent;
+      }
+      #chartX {
+        position: relative;
+        margin: 1em auto;
+        width: 400px;
+        height: 160px;
+        top: -50px;
+        left: -150px;
+        -webkit-transform-origin: 50% 50%;
+        -webkit-transform: rotateX(55deg);
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-origin: 50% 50%;
+        -moz-transform: rotateX(35deg);
+        -moz-transform-style: preserve-3d;
+      }
+      #chartY {
+        -webkit-transform-origin: 50% 50%;
+        -webkit-transform: rotateY(0deg);
+        -webkit-transform-style: preserve-3d;
+      }
+      #chartZ {
+        -webkit-transform-origin: 50% 50%;
+        -webkit-transform: rotateZ(-20deg);
+        -webkit-transform-style: preserve-3d;
+      }
+      .bar {
+        position: absolute;
+        margin: 0;
+        width: 1.5em;
+        height: 1.8em;
+        outline: none;
+        text-align: center;
+        line-height: 2em;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        font-size: 1.5em;
+        color: @black80;
+      }
+      .barfront, .barback, .barleft, .barright {
+        position: absolute;
+        outline: inherit;
+        background: inherit;
+      }
+      .barfront {
+        width: inherit;
+        bottom: -1px;
+        -webkit-transform: rotateX(90deg);
+        -webkit-transform-origin: 50% 100%;
+        -moz-transform: rotateX(90deg);
+        -moz-transform-origin: 50% 100%;
+      }
+      .barback {
+        width: inherit;
+        top: -1px;
+        -webkit-transform: rotateX(-90deg);
+        -webkit-transform-origin: 50% 0;
+        -moz-transform: rotateX(-90deg);
+        -moz-transform-origin: 50% 0;
+      }
+      .barright {
+        height: inherit;
+        right: -1px;
+        -webkit-transform: rotateY(-90deg);
+        -webkit-transform-origin: 100% 50%;
+        -moz-transform: rotateY(-90deg);
+        -moz-transform-origin: 100% 50%;
+      }
+      .barleft {
+        height: inherit;
+        left: -1px;
+        -webkit-transform: rotateY(90deg);
+        -webkit-transform-origin: 0% 50%;
+        -moz-transform: rotateY(90deg);
+        -moz-transform-origin: 0% 50%;
+      }
+      .slantcontent {
+        position: relative;
+        top: 6em;
+        left: -1em;
+        h2 {
+          text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
+        }
+        p {
+          font-size: 1.2em;
+          text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
+        }
+        #slidein-1, #slidein-2, #slidein-3 {
+          opacity: 0;
+        }
+      }
     }
   }
 }
@@ -368,15 +363,15 @@ left: -1px;
           img {
             width: 10em;
             height: 10em;
-            border: 10px solid #f6f6f6;
-            border-bottom: 30px solid #f6f6f6;
+            border: 10px solid @white96;
+            border-bottom: 30px solid @white96;
             border-radius: 3px;
             box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
           }
           .imgtext {
             font-family: 'Gloria Hallelujah', cursive;
             float: left;
-            color: #333 !important;
+            color: @black80 !important;
             position: absolute;
             top: 82%;
             text-align: center;
@@ -426,7 +421,7 @@ left: -1px;
 /* Slide 6 */
 #slide-6 {
   .bg {
-    background: #eee;
+    background: @white93;
   }
   .hsContainer {
     .hsContent {
@@ -456,10 +451,11 @@ left: -1px;
               display: block;
               padding-bottom: 1em;
               a {
-                color: #666666;
+                color: @black60;
                 text-decoration: none;
                 &.designer1 {
-                  color:#fff; text-shadow:2px 2px 2px #000;
+                  color: @white;
+                  text-shadow: 2px 2px 2px @black;
                 }
                 &.designer2 {
                   background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(1, #60f));
@@ -583,7 +579,40 @@ header {
     // background-color: @black;
   }
 }
+#slide-3:hover #slidein-1 {
+  position: relative;
+  -webkit-animation: fromright 1s 0s 1 forwards;
+  -webkit-transition-timing-function: ease;
+  animation: fromright 1s 0s 1 forwards;
+  transition-timing-function: ease;
 
+}
+#slide-3:hover #slidein-2 {
+  position: relative;
+  -webkit-animation: fromleft 1s 1s 1 forwards;
+  -webkit-transition-timing-function: ease;
+  animation: fromleft 1s 1s 1 forwards;
+  transition-timing-function: ease;
+}
+#slide-3:hover #slidein-3 {
+  position: relative;
+  -webkit-animation: frombottom 1s 2s 1 forwards;
+  -webkit-transition-timing-function: ease;
+  animation: frombottom 1s 2s 1 forwards;
+  transition-timing-function: ease;
+}
+@-webkit-keyframes fromright {
+  0%   {left: 600px; top: 0px; opacity: 0;}
+  100% {left: 0px; top: 0px; opacity: 1;}
+}
+@-webkit-keyframes fromleft {
+  0%   {left: -300px; top: 0px; opacity: 0;}
+  100% {left: 0px; top: 0px; opacity: 1;}
+}
+@-webkit-keyframes frombottom {
+  0%   {left: 0px; top: 300px; opacity: 0;}
+  100% {left: 0px; top: 0px; opacity: 1;}
+}
 
 .rainbow {
   background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
