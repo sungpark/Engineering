@@ -29,6 +29,7 @@ html, body {
   .hsContainer {
     top: 0%;
     .hsContent {
+      z-index: 99;
       top: 0%;
       color: @white;
       left: 15%;
@@ -57,6 +58,7 @@ html, body {
   .hsContainer {
     background: rgba(0, 0, 0, 0.5);
     .hsContent {
+      z-index: 98;
       top: 0%;
       color: @white;
       padding: 15px 20px;
@@ -153,7 +155,6 @@ html, body {
       }
     }
   }
-
 }
 
 /* Slide 3 */
@@ -164,6 +165,7 @@ html, body {
   .hsContainer {
     display: block;
     .hsContent {
+      z-index: 97;
       position: fixed;
       top: 25%;
       left: 35%;
@@ -210,8 +212,8 @@ html, body {
       .bar {
         position: absolute;
         margin: 0;
-        width: 1.5em;
-        height: 1.8em;
+        width: 1.6em;
+        height: 1.6em;
         outline: none;
         text-align: center;
         line-height: 2em;
@@ -283,6 +285,7 @@ html, body {
   }
   .hsContainer {
     .hsContent {
+      z-index: 96;
       margin-left: 0px;
       background: transparent;
       padding: 15px 20px;
@@ -329,6 +332,7 @@ html, body {
     background-size: contain;
 
     .hsContent {
+      z-index: 95;
       margin-left: 0px;
       background: transparent;
       padding: 15px 20px;
@@ -421,10 +425,69 @@ html, body {
 /* Slide 6 */
 #slide-6 {
   .bg {
+    background-image:url('../img/bg-sc4.jpg');
+  }
+  .hsContainer {
+    .hsContent {
+      z-index: 94;
+      margin-left: 0px;
+      background: transparent;
+      padding: 15px 20px;
+      border-radius: 10px;
+      left: 20%;
+      top: 10%;
+      min-width: 990px;
+      h2 {
+        color: @black;
+        font-size: 4em;
+        background: transparent;
+        text-shadow: none;
+      }
+      p {
+        font-size: 1.2em;
+        background: transparent;
+        color: @black;
+        margin: 20px 0 0 10px;
+      }
+      .masonry { /* Masonry container */
+        -moz-column-count: 4;
+        -webkit-column-count: 4;
+        column-count: 4;
+        -moz-column-gap: 1em;
+        -webkit-column-gap: 1em;
+        column-gap: 1em;
+        .item { /* Masonry bricks or child elements */
+          // background-color: @white;
+          background: rgba(255, 255, 255, 0.9);
+          border: 2px dashed rgba(0, 0, 0, 0.3);
+          display: inline-block;
+          margin: 0 0 1em;
+          width: 100%;
+          border-radius: 5px;
+          padding: 1em;
+          a {
+            display: block;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Slide 7 */
+#slide-7 {
+  .bg {
     background: @white93;
   }
   .hsContainer {
     .hsContent {
+      z-index: 93;
       left: 20%;
       position: fixed;
       top: 100px;
